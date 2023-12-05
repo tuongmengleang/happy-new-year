@@ -1,11 +1,12 @@
 html {
     height: 100%;
-    background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+    background: radial-gradient(ellipse at bottom, #f87171 0%, #7f1d1d 100%);
     overflow: hidden;
 }
 
 body {
     background: transparent;
+    font-family: 'Kantumruy Pro', 'Nova Square', sans-serif;
     color: #ffffff;
 }
 
@@ -20,6 +21,25 @@ body {
         0 0 150px #2980B9;
 }
 
+.redlight {
+    text-shadow: 0 0 10px #7f1d1d,
+        0 0 20px #dc2626,
+        0 0 30px #dc2626,
+        0 0 40px #f87171,
+        0 0 70px #f87171,
+        0 0 80px #f87171,
+        0 0 100px #f87171,
+        0 0 150px #f87171;
+}
+
+#canvas {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
 .clock {
     overflow: hidden;
 }
@@ -32,15 +52,17 @@ body {
 .top-pane {
     margin-bottom: 0px;
     border-radius: 5px 5px 0px 0px;
-    background-color: #34495E;
+    background-color: #b91c1c;
     border: 0px;
+    font-weight: 700;
 }
 
 .bottom-pane {
     margin-top: 0px;
     border-radius: 0px 0px 5px 5px;
-    background-color: #2C3E50;
+    background-color: #991b1b;
     border: 0px;
+    font-weight: 500;
 }
 
 @media (min-width: 768px) {

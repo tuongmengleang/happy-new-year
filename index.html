@@ -2,17 +2,20 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - New Year Countdown</title>
+  <title>2024 Commig Soo</title>
+  <link rel="icon" type="image/x-icon" href="/public/favicon.ico">
   <link rel='stylesheet' href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+  <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@200;300;400;500;600;700&family=Nova+Square&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
 
 </head>
 <body>
 <!-- partial:index.partial.html -->
+<canvas id="canvas"> </canvas>
 <div class="wrapper">
   <div class="container text-center">
     <div class="col-md-12">
-      <h1 id="header" class="">New Year Countdown</h1>
+      <h1 id="header" class="">រីករាយឆ្នាំថ្មី​ 2024</h1>
     </div>
     <div class="col-sm-12 col-md-3 col-xs-6">
       <div class="clock">
@@ -20,7 +23,7 @@
           <div id="days" class="num">00</div>
         </div>
         <div class="well bottom-pane">
-          <div id="days-text" class="text">Days</div>
+          <div id="days-text" class="text">ថ្ងៃ</div>
         </div>
       </div>    
     </div>
@@ -30,7 +33,7 @@
           <div id="hours" class="num">00</div>
         </div>
         <div class="well bottom-pane">
-          <div id="hours-text" class="text">Hours</div>
+          <div id="hours-text" class="text">ម៉ោង</div>
         </div>
       </div>
     </div>
@@ -40,7 +43,7 @@
           <div id="mins" class="num">00</div>
         </div>
         <div class="well bottom-pane">
-          <div id="mins-text" class="text">Minutes</div>
+          <div id="mins-text" class="text">នាទី</div>
         </div>
       </div>
     </div>
@@ -50,7 +53,7 @@
           <div id="secs" class="num">00</div>
         </div>
         <div class="well bottom-pane">
-          <div id="secs-text" class="text">Seconds</div>
+          <div id="secs-text" class="text">វិនាទី</div>
         </div>
       </div>
     </div>
@@ -59,7 +62,9 @@
 </div>
 <!-- partial -->
     <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-    <script src='//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script><script  src="./script.js"></script>
+    <script src='//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
+    <script src="./script.js"></script>
+    <script src="snow.js"></script>
 
 </body>
 </html>

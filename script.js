@@ -23,11 +23,11 @@ $(document).ready(function () {
     // var deadline = 'December 31 ' + (today.getFullYear()) + ' 17:53:00';
 
     $('#header').hover(function () {
-        $(this).toggleClass('bluelight');
+        $(this).toggleClass('redlight');
     });
 
     $('.clock').hover(function () {
-        $(this).toggleClass('bluelight');
+        $(this).toggleClass('redlight');
     });
 
     var setClock = function (newyear) {
