@@ -113,6 +113,7 @@ body {
     right: 0;
     background-color: rgba(0, 0, 0, 0.42);
     transition: opacity 0.3s, visibility 0.3s;
+    z-index: 999999;
 }
 
 .menu__inner-wrap {
