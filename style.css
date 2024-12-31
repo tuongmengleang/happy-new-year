@@ -11,6 +11,7 @@ html {
 body {
     color: #ffffff;
     background: transparent;
+    font-family: "Quicksand", "Moulpali", serif !important;
 }
 
 .bluelight {
@@ -67,7 +68,7 @@ body {
 }
 
 .top-pane {
-    padding: 20px 20px 0 20px;
+    padding-bottom: 0;
     margin-bottom: 0px;
     /* border-radius: 5px 5px 0px 0px; */
     /* background-color: #b91c1c; */
