@@ -14,6 +14,38 @@ function timeLeft(endtime) {
     };
 }
 
+/* 👉🏼 Convert LATAN Number to Khmer Number */
+function convertToKhmerNumber(number) {
+    // Khmer numerals mapping
+    const khmerNumerals = {
+        '0': '០',
+        '1': '១',
+        '2': '២',
+        '3': '៣',
+        '4': '៤',
+        '5': '៥',
+        '6': '៦',
+        '7': '៧',
+        '8': '៨',
+        '9': '៩'
+    };
+
+    // Convert the number to string to process each digit
+    const numberStr = number.toString();
+    
+    // Replace each digit with its Khmer equivalent
+    const khmerNumber = numberStr.split('').map(digit => {
+        // Handle decimal point
+        if (digit === '.') {
+            return '.';
+        }
+        return khmerNumerals[digit] || digit;
+    }).join('');
+
+    return khmerNumber;
+}
+console.log(convertToKhmerNumber('1'))
+
 $(document).ready(function () {
     var today = new Date();
     var deadline = 'January 1 ' + (today.getFullYear() + 1) + ' 00:00:00';
@@ -33,10 +65,10 @@ $(document).ready(function () {
     var setClock = function (newyear) {
         var timeinterval = setInterval(function () {
             var t = timeLeft(newyear);
-            $('#days').text(t.days);
-            $('#hours').text(t.hours);
-            $('#mins').text(('0' + t.minutes).slice(-2));
-            $('#secs').text(('0' + t.seconds).slice(-2));
+            $('#days').text(convertToKhmerNumber(t.days));
+            $('#hours').text(convertToKhmerNumber(t.hours));
+            $('#mins').text((convertToKhmerNumber('0') + convertToKhmerNumber(t.minutes)).slice(-2));
+            $('#secs').text((convertToKhmerNumber('0') + convertToKhmerNumber(t.seconds)).slice(-2));
             if (t.total <= 0) {
                 clearInterval(timeinterval);
                 location.href = 'celebrate.html';
