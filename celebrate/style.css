@@ -43,11 +43,21 @@ body {
 }
 
 .canvas-container {
-    /* background-image: url('https://images.pexels.com/photos/3226403/pexels-photo-3226403.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); */
-    background-image: url('https://images.pexels.com/photos/9494718/pexels-photo-9494718.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
-    background-position: top;
+    background-image: url('../assets/images/royal-place.jpg');
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
+    &:before {
+        content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-image: linear-gradient(to bottom right,#384750,#2c1a16);
+            opacity: .6; 
+      }
 }
 
 .loading-init {
